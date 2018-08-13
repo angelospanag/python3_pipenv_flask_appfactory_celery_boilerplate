@@ -14,13 +14,14 @@ celery = Celery(__name__, broker=Config.CELERY_BROKER_URL, backend=Config.RESULT
 
 
 @celery.task
-def test_task(arg):
-    print("HELLO THERE!!!", file=sys.stderr)
+def test_task():
+    print('HELLO THERE!!!', file=sys.stderr)
 
 
+# Periodic tasks definition
 @celery.on_after_configure.connect
 def setup_periodic_tasks(sender, **kwargs):
-    sender.add_periodic_task(2.0, test_task.s(), name='Hello every 2 seconds')
+    sender.add_periodic_task(5.0, test_task.s(), name='Hello every 5 seconds')
 
 
 def create_app(config_name):

@@ -9,3 +9,4 @@ worker_7: celery worker -A celery_worker.celery --loglevel=info -n worker7@%h
 worker_8: celery worker -A celery_worker.celery --loglevel=info -n worker8@%h
 worker_9: celery worker -A celery_worker.celery --loglevel=info -n worker9@%h
 worker_10: celery worker -A celery_worker.celery --loglevel=info -n worker10@%h
+scheduler: celery -A celery_worker.celery beat

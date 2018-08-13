@@ -13,10 +13,11 @@ celery = "*"
 honcho = "*"
 python-dotenv = "*"
 gunicorn = "*"
+"psycopg2" = "*"
 
 [dev-packages]
 "autopep8" = "*"
 pylint = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
