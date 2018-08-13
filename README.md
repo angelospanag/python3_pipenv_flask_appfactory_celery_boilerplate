@@ -22,3 +22,7 @@ From the root of the project execute:
 ```
 brew services start rabbitmq
 ```
+
+# Run application
+
+`make run`: Runs the Flask web application, 10 Celery workers and 1 Celery Scheduler on port `5000`
