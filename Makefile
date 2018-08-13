@@ -1,4 +1,4 @@
 .PHONY: run
 
 run:
-	@honcho start -f Procfile
+	@pipenv run honcho start -f Procfile
