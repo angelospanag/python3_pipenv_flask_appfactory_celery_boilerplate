@@ -17,7 +17,8 @@ gunicorn = "*"
 
 [dev-packages]
 "autopep8" = "*"
-pylint = "*"
+"flake8" = "*"
+"pep8-naming" = "*"
 
 [requires]
 python_version = "3.7"
