@@ -10,7 +10,8 @@ from config import config, Config
 db = SQLAlchemy()
 
 # Celery client
-celery = Celery(__name__, broker=Config.CELERY_BROKER_URL, backend=Config.RESULT_BACKEND)
+celery = Celery(__name__, broker=Config.CELERY_BROKER_URL,
+                backend=Config.RESULT_BACKEND)
 
 
 @celery.task
